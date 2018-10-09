@@ -5,7 +5,8 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetails from './components/video_details';
-const API_KEY = "AIzaSyANPaI86Srt1GptDADFu9bXhLA8VSY8fwg";
+import { youtubeAPI } from '../api_key';
+const API_KEY = youtubeAPI;
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class App extends React.Component {
 
     this.state = { selectedVideo: null, videos: [] };
 
-    this.videoSearch('metallica');
+    this.videoSearch('eminem');
   }
 
   videoSearch(term) {
